@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class FollowMouse : MonoBehaviour
 {
-    private float fixedYPosition;
-    Vector3 startpos;
+    Rigidbody ballRB;
+    [SerializeField] GameObject ball;
 
     void Start()
     {
-        fixedYPosition = transform.position.y;
+        ballRB = GetComponent<Rigidbody>();
         UpdateObjectPosition();
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateObjectPosition();
@@ -21,9 +20,28 @@ public class FollowMouse : MonoBehaviour
 
     private void UpdateObjectPosition()
     {
-        Debug.Log($"mouse X: {Input.mousePosition.x} mouse Y: {Input.mousePosition.y} mouse Z: {Input.mousePosition.z}");
-        Vector3 position = new Vector3(Input.mousePosition.x, fixedYPosition, Input.mousePosition.y);
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //raycast from mouse position
 
-        transform.position = Camera.main.ScreenToWorldPoint(position) + new Vector3(10,10,12);
+        Physics.Raycast(ray, out hit);
+
+        transform.position = new Vector3(hit.point.x, hit.point.y + .75f, hit.point.z); 
+    }
+
+    private void OnDrawGizmos()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //raycast from mouse position
+
+        Physics.Raycast(ray, out hit);
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            ballRB.AddForce(Vector3.forward * 10, ForceMode.Impulse);
+        }
     }
 }
