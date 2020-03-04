@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HitBall : MonoBehaviour
 {
-    Rigidbody ballRB;
+    private Rigidbody ballRB;
+    private ScoreManager scoreManager;
+
     [SerializeField] GameObject ball;
 
     [SerializeField] float hitForce = 5f;
@@ -12,6 +14,7 @@ public class HitBall : MonoBehaviour
 
     private void Start()
     {
+        scoreManager = GetComponent<ScoreManager>();
         ballRB = ball.GetComponent<Rigidbody>();
     }
 
@@ -19,7 +22,8 @@ public class HitBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            ballRB.AddForce(hitDirection * hitForce, ForceMode.Impulse);
+            ballRB.AddForce(hitDirection * hitForce, ForceMode.Impulse); //TODO: change force based on hit strength
+            scoreManager.IncrementStrokes();
         }
     }
 }

@@ -1,18 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject strokesTextObject;
+    TextMeshProUGUI strokesText;
+    private int strokes = 0;
+
     void Start()
     {
-        
+        strokesText = strokesTextObject.GetComponent<TextMeshProUGUI>();
+        UpdateScoreText();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        strokesText.text = $"Strokes: {strokes}";
+    }
+
+    public void IncrementStrokes()
+    {
+        strokes++;
     }
 }
