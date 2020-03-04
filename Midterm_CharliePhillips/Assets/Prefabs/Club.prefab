@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &383742412224347329
+--- !u!1 &3426107580235465689
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3677200538521620178}
-  - component: {fileID: 5643868876333380836}
-  - component: {fileID: 2121060993633093661}
-  - component: {fileID: 8535093867147257290}
-  - component: {fileID: 417872476196979259}
-  m_Layer: 0
-  m_Name: Club
+  - component: {fileID: 3426107580235465694}
+  - component: {fileID: 3426107580235465692}
+  - component: {fileID: 3426107580235465693}
+  m_Layer: 2
+  m_Name: Club_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3677200538521620178
+--- !u!4 &3426107580235465694
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383742412224347329}
-  m_LocalRotation: {x: 0.060786612, y: -0.6653044, z: 0.05449654, w: 0.7420951}
-  m_LocalPosition: {x: -0.303, y: 0.821, z: -1.252}
+  m_GameObject: {fileID: 3426107580235465689}
+  m_LocalRotation: {x: 0.114074394, y: -0.00000008940696, z: -0.000000007217749, w: 0.9934722}
+  m_LocalPosition: {x: 0, y: 0.7550001, z: 0.15100004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3426107580663487467}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9.366, y: -83.754005, z: 0}
---- !u!33 &5643868876333380836
+  m_LocalEulerAnglesHint: {x: 13.1, y: 0, z: 0}
+--- !u!33 &3426107580235465692
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383742412224347329}
+  m_GameObject: {fileID: 3426107580235465689}
   m_Mesh: {fileID: 2243869233237897148, guid: ee1cc591e65583144889758a90ac7aee, type: 3}
---- !u!23 &2121060993633093661
+--- !u!23 &3426107580235465693
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383742412224347329}
+  m_GameObject: {fileID: 3426107580235465689}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,29 +81,111 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8535093867147257290
-MeshCollider:
+--- !u!1 &3426107580663487464
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383742412224347329}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3426107580663487467}
+  - component: {fileID: 3426107580663487468}
+  - component: {fileID: 3426107580663487471}
+  - component: {fileID: 3426107580663487469}
+  - component: {fileID: 3426107580663487466}
+  - component: {fileID: 3426107580663487470}
+  m_Layer: 2
+  m_Name: Club
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3426107580663487467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426107580663487464}
+  m_LocalRotation: {x: 0.005090318, y: -0.68088895, z: -0.00043585844, w: 0.7323689}
+  m_LocalPosition: {x: -0.214, y: 0.061, z: -1.264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3426107580235465694}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.393, y: -85.829, z: -0.43400002}
+--- !u!54 &3426107580663487468
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426107580663487464}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!65 &3426107580663487471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426107580663487464}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2243869233237897148, guid: ee1cc591e65583144889758a90ac7aee, type: 3}
---- !u!114 &417872476196979259
+  serializedVersion: 2
+  m_Size: {x: 0.043337043, y: 0.07132764, z: 0.20452723}
+  m_Center: {x: -0.0022129342, y: 0.030763406, z: -0.028801829}
+--- !u!114 &3426107580663487469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383742412224347329}
+  m_GameObject: {fileID: 3426107580663487464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43a7b5223c87ed24bab8c7487ef50737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundOffset: 0
+  rayLength: 100
+--- !u!114 &3426107580663487466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426107580663487464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee24faf564066840ad2969d9960deec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  hitRadius: 0.1
+--- !u!114 &3426107580663487470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426107580663487464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994d8ecc80f5c56478ae7c3061f80f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  hitForce: 5
+  hitDirection: {x: 0, y: 0, z: 0}
