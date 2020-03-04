@@ -5,13 +5,14 @@ using UnityEngine;
 public class RotateTowardsBall : MonoBehaviour
 {
     private GameObject ball;
-    private Rigidbody clubRB;
+    private HitBall clubHit;
 
-    private float speed = 10f;
+    [SerializeField] float speed = 10f;
+    [SerializeField] float hitRadius = 0.2f;
 
     void Start()
     {
-        clubRB = GetComponent<Rigidbody>();
+        clubHit = GetComponent<HitBall>();
         GetBallFromScene();
         UpdateRotation();
     }
@@ -28,23 +29,42 @@ public class RotateTowardsBall : MonoBehaviour
 
     void UpdateRotation()
     {
-        // Determine which direction to rotate towards
-        Vector3 targetDirection = ball.transform.position - transform.position;
+        //Debug.Log(Vector3.Distance(transform.position, ball.transform.position));
+        if (!InHitRadius())
+        {
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = ball.transform.position - transform.position;
 
-        // The step size is equal to speed times frame time.
-        float singleStep = speed * Time.deltaTime;
+            // Draw a ray pointing at our target in
+            Debug.DrawRay(transform.position, targetDirection, Color.red);
 
-        // Rotate the forward vector towards the target direction by one step
-        Vector3 newDirection = Vector3.RotateTowards(Vector3.forward, targetDirection, singleStep, 0.0f);
+            targetDirection.y = 0; // keep only the horizontal direction
 
-        // Draw a ray pointing at our target in
-        Debug.DrawRay(transform.position, newDirection, Color.red);
+            Quaternion offset = Quaternion.Euler(0, 90, 0);
+            Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
 
-       // newDirection.y = 0; // keep only the horizontal direction
+            // Calculate a rotation a step closer to the target and applies rotation to this object 
+            transform.rotation = lookRotation * offset;
 
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        transform.rotation = Quaternion.LookRotation(newDirection);
+            //set club hit direction
+            clubHit.hitDirection = targetDirection;
+        }       
+    }
 
-        
+    /// <summary>
+    /// Returns true if ball and club are within a certain hitRadius
+    /// </summary>
+    /// <returns>True or False</returns>
+    bool InHitRadius()
+    {
+        if (Vector3.Distance(transform.position, ball.transform.position) < hitRadius)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 }

@@ -2,12 +2,13 @@
 
 public class FollowMouse : MonoBehaviour
 {
-    Rigidbody ballRB;
-    [SerializeField] GameObject ball;
+    
+    [SerializeField] float groundOffset = .75f;
+
+    [SerializeField] float rayLength = 100f;
 
     void Start()
     {
-        ballRB = GetComponent<Rigidbody>();
         UpdateObjectPosition();
     }
 
@@ -23,23 +24,20 @@ public class FollowMouse : MonoBehaviour
 
         Physics.Raycast(ray, out hit);
 
-        transform.position = new Vector3(hit.point.x, hit.point.y + .75f, hit.point.z); 
+        transform.position = new Vector3(hit.point.x, hit.point.y + groundOffset, hit.point.z);
+        
     }
 
+    /*
     private void OnDrawGizmos()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //raycast from mouse position
 
-        Physics.Raycast(ray, out hit);
-        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        Physics.Raycast(ray, out hit, rayLength);
+        Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.blue);
     }
+    */
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ball"))
-        {
-            ballRB.AddForce(Vector3.forward * 10, ForceMode.Impulse);
-        }
-    }
+   
 }
