@@ -40,7 +40,7 @@ public class RotateTowardsBall : MonoBehaviour
 
             targetDirection.y = 0; // keep only the horizontal direction
 
-            Quaternion offset = Quaternion.Euler(0, 90, 0);
+            Quaternion offset = Quaternion.Euler(0, 90, 0); //offset club rotation by 90 deg
             Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
 
             // Calculate a rotation a step closer to the target and applies rotation to this object 
