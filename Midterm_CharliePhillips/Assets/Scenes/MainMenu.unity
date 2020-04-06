@@ -1197,8 +1197,8 @@ MonoBehaviour:
 
     Par 2'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ef0eb9299e7c92d40bd73115c6cec69d, type: 2}
-  m_sharedMaterial: {fileID: -442384631976039028, guid: ef0eb9299e7c92d40bd73115c6cec69d,
+  m_fontAsset: {fileID: 11400000, guid: cd20a078f4d7cd645abd0e03d4888619, type: 2}
+  m_sharedMaterial: {fileID: 4579941612935326729, guid: cd20a078f4d7cd645abd0e03d4888619,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1224,8 +1224,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1321,7 +1321,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -442384631976039028, guid: ef0eb9299e7c92d40bd73115c6cec69d, type: 2}
+  - {fileID: 4579941612935326729, guid: cd20a078f4d7cd645abd0e03d4888619, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4623,14 +4623,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984565230}
-  m_LocalRotation: {x: 0.07690756, y: -0.13975374, z: -0.0108881965, w: 0.98713505}
-  m_LocalPosition: {x: 0.6589999, y: 0.15899992, z: -1.428}
+  m_LocalRotation: {x: 0.13440603, y: 0.3066574, z: -0.03851064, w: 0.94149524}
+  m_LocalPosition: {x: 0.496, y: 0.183, z: -1.383}
   m_LocalScale: {x: 0.43708843, y: 0.3184641, z: -0.077059105}
   m_Children:
   - {fileID: 521984295}
   m_Father: {fileID: 664415302}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 8.557, y: -16.303001, z: -2.492}
+  m_LocalEulerAnglesHint: {x: 16.064001, y: 36.166, z: 0.591}
 --- !u!1001 &2034773313
 PrefabInstance:
   m_ObjectHideFlags: 0
