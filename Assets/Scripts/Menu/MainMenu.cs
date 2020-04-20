@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject creditsMenu;
     [SerializeField] GameObject stageSelectMenu;
+
+    private AudioSource audioSource;
+    [SerializeField] AudioClip buttonPressSound;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void StartGame()
     {
@@ -32,6 +41,11 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         creditsMenu.SetActive(false);
         stageSelectMenu.SetActive(true);
+    }
+
+    public void PlayButtonPressSound()
+    {
+        audioSource.PlayOneShot(buttonPressSound, 0.7F);
     }
 
     public void QuitGame()
