@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ScoreManager))]
 [RequireComponent(typeof(AudioSource))]
 public class HitBall : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class HitBall : MonoBehaviour
 
     [SerializeField] GameObject ball;
 
-    [SerializeField] float hitForce = 5f;
+    [SerializeField] float hitForce = 10f;
     public Vector3 hitDirection;
 
     private AudioSource audioSource;
@@ -23,9 +24,9 @@ public class HitBall : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        if (other.gameObject.CompareTag("Ball"))
         {
             PlayPuttSound();
             ballRB.AddForce(hitDirection * hitForce, ForceMode.Impulse); //TODO: change force based on hit strength
