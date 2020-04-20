@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        ShowMainMenu();
     }
 
     public void StartGame()
@@ -24,7 +25,7 @@ public class MainMenu : MonoBehaviour
 
     public void ShowCredits()
     {
-        mainMenu.SetActive(false);
+       // mainMenu.SetActive(false);
         creditsMenu.SetActive(true);
         stageSelectMenu.SetActive(false);
     }
@@ -46,6 +47,11 @@ public class MainMenu : MonoBehaviour
     public void PlayButtonPressSound()
     {
         audioSource.PlayOneShot(buttonPressSound, 0.7F);
+    }
+
+    public void FullCredits()
+    {
+        Application.OpenURL("https://github.com/djblooky/ges-midterm/wiki/Credits");
     }
 
     public void QuitGame()
