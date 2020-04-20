@@ -22,8 +22,14 @@ public class HitBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
+            PlayHitSound();
             ballRB.AddForce(hitDirection * hitForce, ForceMode.Impulse); //TODO: change force based on hit strength
             scoreManager.IncrementStrokes();
         }
+    }
+
+    void PlayHitSound()
+    {
+        
     }
 }
