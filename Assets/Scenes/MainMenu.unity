@@ -3669,7 +3669,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinTrigger
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4631151456306123042, guid: 5e8f05d8fd713494cb7125e5026b28d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e8f05d8fd713494cb7125e5026b28d1, type: 3}
 --- !u!1 &1168249637
 GameObject:
