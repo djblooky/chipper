@@ -16,7 +16,6 @@ public class DetectWin : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Destroy(other.gameObject);
             goalFlag.SetActive(true);
             UpdateWinText();
         }
