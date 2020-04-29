@@ -9,6 +9,7 @@ public class NavigateStage : MonoBehaviour
 
     void Update()
     {
+        //if not paused
         CheckForRotation();
         CheckForCameraZoom();
     }

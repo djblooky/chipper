@@ -2,8 +2,7 @@
 
 public class FollowMouse : MonoBehaviour
 {
-    
-    [SerializeField] float groundOffset = .75f;
+   [SerializeField] float groundOffset = .75f;
 
     [SerializeField] float rayLength = 100f;
 
@@ -14,6 +13,7 @@ public class FollowMouse : MonoBehaviour
 
     void Update()
     {
+        //if not paused
         UpdateObjectPosition();
     }
 
@@ -24,8 +24,7 @@ public class FollowMouse : MonoBehaviour
 
         Physics.Raycast(ray, out hit);
 
-        transform.position = new Vector3(hit.point.x, hit.point.y + groundOffset, hit.point.z);
-        
+        transform.position = new Vector3(hit.point.x, hit.point.y + groundOffset, hit.point.z);   
     }
 
     /*
