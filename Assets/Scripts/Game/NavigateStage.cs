@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NavigateStage : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class NavigateStage : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(new Vector3(0,-rotationSpeed, 0), Space.Self);
+            transform.Rotate(new Vector3(0, -rotationSpeed, 0), Space.Self);
         }
     }
 
@@ -31,8 +29,8 @@ public class NavigateStage : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W)) //zoom camera in
         {
-            if (Camera.main.orthographicSize > 1)    
-                Camera.main.orthographicSize -= zoomFactor; 
+            if (Camera.main.orthographicSize > 1)
+                Camera.main.orthographicSize -= zoomFactor;
         }
 
         if (Input.GetKey(KeyCode.S)) //zoom camera in

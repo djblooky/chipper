@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
 
     public void ShowCredits()
     {
-       // mainMenu.SetActive(false);
+        // mainMenu.SetActive(false);
         creditsMenu.SetActive(true);
         stageSelectMenu.SetActive(false);
     }
