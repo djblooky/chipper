@@ -44,6 +44,7 @@ public class GameMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu"); //load main menu
         Cursor.visible = true;
+        GameManager.paused = false;
     }
 
     public void ReplayLevel()
