@@ -17,10 +17,9 @@ public class MainMenu : MonoBehaviour
         ShowMainMenu();
     }
 
-    public void StartGame()
+    public void GoToLevel(int level)
     {
-        //the scene needs to be registered in build settings
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(level); //dependent on scenes being properly ordered in build settings
     }
 
     public void ShowCredits()
