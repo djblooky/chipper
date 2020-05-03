@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class DetectWin : MonoBehaviour
 {
-    GameObject goalFlag;
+    private GameObject goalFlag;
+    private GameMenu menu;
+    private GameObject canvas;
+
+    [SerializeField] float winDelay = 3f;
 
     private void Start()
     {
         goalFlag = GameObject.FindGameObjectWithTag("GoalFlag");
         goalFlag.SetActive(false);
+
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        menu = canvas.GetComponent<GameMenu>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,13 +24,13 @@ public class DetectWin : MonoBehaviour
         if (other.gameObject.CompareTag("Ball"))
         {
             goalFlag.SetActive(true);
-            UpdateWinText();
+            Invoke("EndStage", winDelay);
         }
     }
 
-    void UpdateWinText()
+    void EndStage()
     {
-        Debug.Log("You win!");
+        menu.ShowEndStageMenu();   
     }
 
 }
