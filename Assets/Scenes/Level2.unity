@@ -1508,17 +1508,17 @@ PrefabInstance:
     - target: {fileID: 4631151456306123046, guid: 5e8f05d8fd713494cb7125e5026b28d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.009
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4631151456306123046, guid: 5e8f05d8fd713494cb7125e5026b28d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.036
       objectReference: {fileID: 0}
     - target: {fileID: 4631151456306123046, guid: 5e8f05d8fd713494cb7125e5026b28d1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.017
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 4631151456306123046, guid: 5e8f05d8fd713494cb7125e5026b28d1,
         type: 3}
@@ -6076,7 +6076,7 @@ PrefabInstance:
         type: 3}
       propertyPath: strokesTextObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 909684413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4a3666a24c650d4fb74cd16c492255f, type: 3}
 --- !u!1 &1640538995 stripped
