@@ -7,7 +7,6 @@ public class RotateTowardsBall : MonoBehaviour
     private GameObject ball;
     private HitBall clubHit;
 
-    [SerializeField] float speed = 10f;
     [SerializeField] float hitRadius = 0f;
 
     void Start()
@@ -30,12 +29,12 @@ public class RotateTowardsBall : MonoBehaviour
     void UpdateRotation()
     {
         //Debug.Log(Vector3.Distance(transform.position, ball.transform.position));
-        if (!InHitRadius() && !Input.GetMouseButton(0)) //user is holding left click and ball is in radius
+        if (!InHitRadius()) //user is holding left click and ball is in radius
         {
             // Determine which direction to rotate towards
             Vector3 targetDirection = ball.transform.position - transform.position;
 
-            // Draw a ray pointing at our target in
+            // Draw a ray pointing at ball
             Debug.DrawRay(transform.position, targetDirection, Color.red);
 
             targetDirection.y = 0; // keep only the horizontal direction

@@ -6,7 +6,7 @@ public class DetectWin : MonoBehaviour
 {
     private GameObject goalFlag;
     private GameMenu menu;
-    private GameObject canvas;
+    [SerializeField] private GameObject canvas;
 
     [SerializeField] float winDelay = 3f;
 
