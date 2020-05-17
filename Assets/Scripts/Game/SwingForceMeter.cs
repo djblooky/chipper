@@ -41,7 +41,7 @@ public class SwingForceMeter : MonoBehaviour
 
             if (hitBall.wasHit && meterState != State.StoppedByHit) //if ball has been hit on this swing
             {
-                hitBall.HitForce *= lineHeight; //scale force based on line height
+                ScaleForce(); //scale force based on line height
                 meterState = State.StoppedByHit;
             }
 
@@ -60,6 +60,13 @@ public class SwingForceMeter : MonoBehaviour
         {
             HideMeter();
         }
+    }
+
+    void ScaleForce()
+    {
+        //20 = 20 * 0.1 = 2
+        //100 = 100 * 0.1 = 10  
+        hitBall.HitForce = hitBall.HitForce * lineHeight;
     }
 
     void GetLineHeight()

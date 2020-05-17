@@ -13,8 +13,15 @@ public class HitBall : MonoBehaviour
 
     [SerializeField] GameObject ball;
 
+    [Tooltip("The base/maximum force to scale the club force off of.")]
     [SerializeField] private float baseForce = 100f;
+
+    [Tooltip("Constantly updated from the base force *= swingMeterHeight (between 0-1f)")]
     [SerializeField] private float hitForce;
+
+    [Tooltip("The impulse force being applied to the club. clubForce = hitForce * baseForce")]
+    [SerializeField] Vector3 clubForce;
+
     public Vector3 hitDirection;
 
     private AudioSource audioSource;
@@ -78,10 +85,16 @@ public class HitBall : MonoBehaviour
         if (other.gameObject.CompareTag("Ball") && !wasHit) //if ball wasnt already hit this swing
         {
             PlayPuttSound();
-            ballRB.AddForce(hitDirection * hitForce, ForceMode.Impulse); 
+            AddHitForce();
             scoreManager.IncrementStrokes();
             wasHit = true;
         }
+    }
+
+    void AddHitForce()
+    {
+        clubForce = hitDirection * hitForce;
+        ballRB.AddForce(clubForce, ForceMode.Impulse);
     }
 
     void PlayPuttSound()

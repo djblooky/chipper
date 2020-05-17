@@ -6012,6 +6012,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3426107580663487466, guid: b4a3666a24c650d4fb74cd16c492255f,
+        type: 3}
+      propertyPath: hitRadius
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3426107580663487467, guid: b4a3666a24c650d4fb74cd16c492255f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6082,6 +6087,11 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 1156259781}
+    - target: {fileID: 3426107580663487470, guid: b4a3666a24c650d4fb74cd16c492255f,
+        type: 3}
+      propertyPath: baseForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4092580737992271562, guid: b4a3666a24c650d4fb74cd16c492255f,
         type: 3}
       propertyPath: strokesTextObject
