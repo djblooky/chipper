@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class DetectWin : MonoBehaviour
 {
-    private GameObject goalFlag;
+    private GameObject confetti;
     private GameMenu menu;
-    [SerializeField] private GameObject canvas;
+    private GameObject canvas;
 
     [SerializeField] float winDelay = 3f;
 
     private void Start()
     {
-        goalFlag = GameObject.FindGameObjectWithTag("GoalFlag");
-        goalFlag.SetActive(false);
+        confetti = GameObject.FindGameObjectWithTag("Confetti");
+        confetti.SetActive(false);
 
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         menu = canvas.GetComponent<GameMenu>();
@@ -23,7 +23,7 @@ public class DetectWin : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            goalFlag.SetActive(true);
+            confetti.SetActive(true);
             Invoke("EndStage", winDelay);
         }
     }

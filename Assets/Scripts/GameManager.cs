@@ -7,20 +7,21 @@ public class GameManager : MonoBehaviour
     private string currentLevel;
 
     //Club
-    GameObject club;
-    private FollowMouse followMouseComponent;
-    private RotateTowardsBall rotateTowardsComponent;
-    private SwingForceMeter swingMeterComponent;
+    [HideInInspector] public static GameObject club;
+    [HideInInspector] public static FollowMouse followMouseComponent;
+    [HideInInspector] public static RotateTowardsBall rotateTowardsComponent;
+    [HideInInspector] public static SwingForceMeter swingMeterComponent;
+    [HideInInspector] public static HitBall hitBallComponent;
 
     //Stage
-    GameObject stage;
-    private NavigateStage navigateStageComponent;
+    [HideInInspector] public static GameObject stage;
+    [HideInInspector] public static NavigateStage navigateStageComponent;
 
     //Ball
-    GameObject ball;
-    Rigidbody ballRB;
+    [HideInInspector] public static GameObject ball;
+    [HideInInspector] public static Rigidbody ballRB;
 
-    void Start()
+    void Awake()
     {
         Cursor.visible = false;
         GetObjectsFromScene();
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         followMouseComponent = club.GetComponent<FollowMouse>();
         rotateTowardsComponent = club.GetComponent<RotateTowardsBall>();
         swingMeterComponent = club.GetComponentInChildren<SwingForceMeter>();
+        hitBallComponent = club.GetComponentInChildren<HitBall>();
 
         //stage components
         navigateStageComponent = stage.GetComponent<NavigateStage>();
