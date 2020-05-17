@@ -7,29 +7,45 @@ public class GameManager : MonoBehaviour
     private string currentLevel;
 
     //Club
-    [SerializeField] GameObject clubObject;
+    GameObject club;
     private FollowMouse followMouseComponent;
     private RotateTowardsBall rotateTowardsComponent;
+    private SwingForceMeter swingMeterComponent;
 
     //Stage
-    [SerializeField] GameObject stageObject;
+    GameObject stage;
     private NavigateStage navigateStageComponent;
+
+    //Ball
+    GameObject ball;
+    Rigidbody ballRB;
 
     void Start()
     {
         Cursor.visible = false;
+        GetObjectsFromScene();
         SetUpComponents();
+    }
+
+    void GetObjectsFromScene()
+    {
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        club = GameObject.FindGameObjectWithTag("Club");
+        stage = GameObject.FindGameObjectWithTag("Stage");
     }
 
     void SetUpComponents()
     {
         //club components
-        followMouseComponent = clubObject.GetComponent<FollowMouse>();
-        rotateTowardsComponent = clubObject.GetComponent<RotateTowardsBall>();
+        followMouseComponent = club.GetComponent<FollowMouse>();
+        rotateTowardsComponent = club.GetComponent<RotateTowardsBall>();
+        swingMeterComponent = club.GetComponentInChildren<SwingForceMeter>();
 
         //stage components
-        navigateStageComponent = stageObject.GetComponent<NavigateStage>();
+        navigateStageComponent = stage.GetComponent<NavigateStage>();
 
+        //ball
+        ballRB = ball.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -53,12 +69,16 @@ public class GameManager : MonoBehaviour
             navigateStageComponent.enabled = false;
             rotateTowardsComponent.enabled = false;
             followMouseComponent.enabled = false;
+            swingMeterComponent.enabled = false;
+            ballRB.freezeRotation = true;
         }
         else
         {
             navigateStageComponent.enabled = true;
             rotateTowardsComponent.enabled = true;
             followMouseComponent.enabled = true;
+            swingMeterComponent.enabled = true;
+            ballRB.freezeRotation = false;
         }
     }
 

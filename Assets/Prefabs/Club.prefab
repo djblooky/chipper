@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1877038113764808296}
   m_Layer: 2
   m_Name: Club
-  m_TagString: Untagged
+  m_TagString: Club
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   ball: {fileID: 0}
   baseForce: 20
   hitForce: 5
+  clubForce: {x: 0, y: 0, z: 0}
   hitDirection: {x: 0, y: 0, z: 0}
   puttSound: {fileID: 8300000, guid: 2d3ac2f3e901e2c4ea7ea8e028f2ea77, type: 3}
   wasHit: 0
