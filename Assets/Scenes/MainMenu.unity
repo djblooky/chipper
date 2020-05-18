@@ -2918,11 +2918,11 @@ RectTransform:
   m_Father: {fileID: 138808846}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 2.7001, y: 258}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -351}
   m_SizeDelta: {x: 372.5, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &798243704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2945,8 +2945,8 @@ MonoBehaviour:
 
     charlie phillips'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 418bc5082a21f724aa8bd83de4a4d71b, type: 2}
-  m_sharedMaterial: {fileID: -5475432770132360841, guid: 418bc5082a21f724aa8bd83de4a4d71b,
+  m_fontAsset: {fileID: 11400000, guid: cd20a078f4d7cd645abd0e03d4888619, type: 2}
+  m_sharedMaterial: {fileID: 4579941612935326729, guid: cd20a078f4d7cd645abd0e03d4888619,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2972,7 +2972,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.95
+  m_fontSize: 53.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5460,7 +5460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: 349}
+  m_AnchoredPosition: {x: 20, y: 310}
   m_SizeDelta: {x: 372.5, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1761415676
@@ -5483,8 +5483,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: chipper
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 418bc5082a21f724aa8bd83de4a4d71b, type: 2}
-  m_sharedMaterial: {fileID: -5475432770132360841, guid: 418bc5082a21f724aa8bd83de4a4d71b,
+  m_fontAsset: {fileID: 11400000, guid: 1b461100fc972bc47bb0939b326974a5, type: 2}
+  m_sharedMaterial: {fileID: 911176278775033345, guid: 1b461100fc972bc47bb0939b326974a5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5510,7 +5510,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44.4
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
