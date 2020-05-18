@@ -15,7 +15,7 @@ public class Tutorial : MonoBehaviour
 
     void SetUp()
     {
-        GameManager.club.SetActive(true);
+       // GameManager.club.SetActive(true);
         GameManager.ball.SetActive(false);
         GameManager.swingMeterComponent.enabled = false;
     }

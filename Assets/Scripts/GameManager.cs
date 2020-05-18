@@ -52,8 +52,21 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        ShowCursorToggle();
         UpdateCurrentLevel();
         CheckForPause();
+    }
+
+    void ShowCursorToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && Cursor.visible)
+        {
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
     }
 
     void UpdateCurrentLevel()
