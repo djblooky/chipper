@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         Cursor.visible = false;
         GetObjectsFromScene();
-        SetUpComponents();
+        SetUpComponents();  
     }
 
     void GetObjectsFromScene()
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         {
             Cursor.visible = true;
         }
-        else
+        else if(Input.GetKeyDown(KeyCode.Escape) && !Cursor.visible)
         {
             Cursor.visible = false;
         }
