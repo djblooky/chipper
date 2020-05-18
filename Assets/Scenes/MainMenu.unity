@@ -3102,8 +3102,8 @@ MonoBehaviour:
 
     charlie phillips'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cd20a078f4d7cd645abd0e03d4888619, type: 2}
-  m_sharedMaterial: {fileID: 4579941612935326729, guid: cd20a078f4d7cd645abd0e03d4888619,
+  m_fontAsset: {fileID: 11400000, guid: 6079bd003c9657c47970666da90195ae, type: 2}
+  m_sharedMaterial: {fileID: -759873494111400912, guid: 6079bd003c9657c47970666da90195ae,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

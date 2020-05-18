@@ -4,7 +4,7 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] TMP_Text tutorialText;
-    int tutorialStep = 1;
+    int tutorialStep = 0;
     float timeLeft = 3.0f;
 
     private void Start()
@@ -22,8 +22,11 @@ public class Tutorial : MonoBehaviour
     void PlayTutorial()
     {
         switch (tutorialStep) {
+            case 0:
+                tutorialText.text = "Use the W and S keys to zoom";
+                break;  
             case 1:
-                tutorialText.text = "Use the WASD keys to rotate the stage";
+                tutorialText.text = "Use the A and D keys to rotate the stage";
                 break;
             case 2:
                 GameManager.ball.SetActive(true);
@@ -56,8 +59,11 @@ public class Tutorial : MonoBehaviour
     {
         switch (tutorialStep)
         {
+            case 0: if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S))
+                    tutorialStep = 1;
+                break;
             case 1:
-                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))           
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D))           
                     tutorialStep = 2; 
                 break;
             case 2:
