@@ -4163,6 +4163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 6243019767722296947, guid: 5e8f05d8fd713494cb7125e5026b28d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4631151456306123042, guid: 5e8f05d8fd713494cb7125e5026b28d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e8f05d8fd713494cb7125e5026b28d1, type: 3}
