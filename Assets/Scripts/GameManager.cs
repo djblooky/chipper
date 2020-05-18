@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static GameObject ball;
     [HideInInspector] public static Rigidbody ballRB;
 
-    void Awake()
+    void Start()
     {
         Cursor.visible = false;
         GetObjectsFromScene();
